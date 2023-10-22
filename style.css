@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5rem;
+    background-color: aliceblue;
+}
+
+header {
+    position: sticky;
+    background-color: black;
+    color: rgb(255, 45, 45);
+    text-align: center;
+    top: 0;
+}
+
+nav {
+    background-color: aliceblue;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+nav a, nav a:visited {
+    color: rgb(105, 118, 114);
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    color: brown;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 5px double #333;
+    border-radius: 50%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card figcaption {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    .card {
+        width: min(100%, 400px);
+    }
+    .card:last-child {
+        order: -1;
+    }
+}
+
+footer {
+    position: sticky;
+    background-color: black;
+    color: rgb(255, 45, 45);
+    text-align: center;
+    bottom: 0;
+}
